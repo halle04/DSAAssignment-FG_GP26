@@ -1,17 +1,19 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 //add
 namespace Utils {
+    [Serializable]
     public class GenericQueue<T> {
-        private List<T> Queue;
+        public List<T> Queue;
 
-        public GenericQueue(T InNewElement) {
+        public GenericQueue() {
             Queue = new List<T>();
         }
 
-        public void Enqueue(T InNewElement) {
-            Queue.Add(InNewElement);
+        public void Enqueue(T Item) {
+            Queue.Add(Item);
         }
 
         public T Peek() {
@@ -22,7 +24,7 @@ namespace Utils {
             return Queue[0];
         }
 
-        public T Dequeue(T InElement) {
+        public T Dequeue() {
             if(Queue.Count == 0) {
                 throw new Exception("queue is empty, cannot dequeue");
             }
@@ -35,5 +37,6 @@ namespace Utils {
         public void Clear() {
             Queue.Clear();
         }
+
     }
 }

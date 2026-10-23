@@ -5359,6 +5359,29 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6.999998, y: 4.25, z: 1.0009978}
   m_Center: {x: -1.5000007, y: 2.125, z: -0.5004989}
+--- !u!1 &1936319971 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1057683460427819544, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+  m_PrefabInstance: {fileID: 6825722813265351610}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1936319973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936319971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f0419b7a0ea044696ab76d11cbde3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EmployeeRef
+  employeeUser:
+  - name: 
+    employeeId: 0
+    hasEngineRoomClearance: 0
+    lastEntranceInEngineRoom: 
+    lastExitFromEngineRoom: 
 --- !u!1001 &1938831992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5643,6 +5666,26 @@ PrefabInstance:
       objectReference: {fileID: 4900000, guid: 0b0f32cb478e1474ba9b2ce9c454e620, type: 3}
     - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: testTask
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: 'managedReferences[-2]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: testTask.Queue.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: 'testTask.Queue.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 3ebf2caa8e5282e4fac0e82886617540, type: 2}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: 'testTask.Queue.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 4960aba1670401241b739cf6de911af6, type: 2}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: 'testTask.Queue.Array.data[2]'
       value: 
       objectReference: {fileID: 11400000, guid: 4960aba1670401241b739cf6de911af6, type: 2}
     - target: {fileID: 5694532769315531512, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
@@ -5688,7 +5731,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1057683460427819544, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1936319973}
   m_SourcePrefab: {fileID: 100100000, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
 --- !u!1001 &8404672306686481740
 PrefabInstance:
