@@ -3,6 +3,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Environment.Tasks {
+
+    
+
     [Serializable]
     public class Employee {
         public string name;
@@ -20,6 +23,7 @@ namespace Environment.Tasks {
     [CreateAssetMenu(fileName = "Check Employees Task", menuName = "Check Employees Task")]
     public class newEmployee : Task {
         [SerializeField] TextAsset jsonFile;
+        [SerializeField] private EmployeeUI employeeUI;
 
         public override void Execute() {
             Employee[] employees = JsonUtility.FromJson<EmployeeArray>(jsonFile.text).employees;
