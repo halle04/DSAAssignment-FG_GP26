@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Environment.Tasks {
@@ -5,8 +6,18 @@ namespace Environment.Tasks {
         [SerializeField] private Transform content;
         [SerializeField] private GameObject employeeEntryPrefab;
         [SerializeField] private GameObject employeeScreen;
+
+        [Header("Sorting Tasks")]
+        [SerializeField] private AlphabeticalSortingTask alphabeticalSortingTask;
+        [SerializeField] private EntranceTimeSortingTask entranceTimeSortingTask;
+
+        [Header("Reset")]
+        [SerializeField] private TextAsset originalEmployeeJson;
+
+        private bool alphabeticalDescending = false;
+        private bool entranceTimeDescending = false;
+
         public void PopulateEmployees(Employee[] employees) {
-            // Clear existing entries
             foreach(Transform child in content) {
                 Destroy(child.gameObject);
             }
@@ -14,7 +25,6 @@ namespace Environment.Tasks {
             if(employees == null)
                 return;
 
-            // Create an entry for every employee
             foreach(Employee employee in employees) {
                 GameObject entry = Instantiate(
                     employeeEntryPrefab,
@@ -24,16 +34,103 @@ namespace Environment.Tasks {
                 EmployeeScreen employeeEntry =
                     entry.GetComponent<EmployeeScreen>();
 
-                employeeEntry.SetEmployee(employee);
+                if(employeeEntry != null) {
+                    employeeEntry.SetEmployee(employee);
+                }
+                else {
+                    Debug.LogError(
+                        "Employee prefab is missing EmployeeScreen!"
+                    );
+                }
             }
         }
+
         public void OpenScreen() {
-            employeeScreen.SetActive(true);
+            if(employeeScreen != null)
+                employeeScreen.SetActive(true);
+
+            if(EmployeeRef.Instance != null)
+                PopulateEmployees(EmployeeRef.Instance.employeeUser);
+        }
+
+        public void CloseScreen() {
+            if(employeeScreen != null)
+                employeeScreen.SetActive(false);
+        }
+
+        public void SortAlphabetically() {
+            if(alphabeticalSortingTask == null) {
+                Debug.LogError("Alphabetical Sorting Task is not assigned!");
+                return;
+            }
+
+            if(EmployeeRef.Instance == null ||
+                EmployeeRef.Instance.employeeUser == null) {
+                Debug.LogError("Employee data is not loaded!");
+                return;
+            }
+
+            alphabeticalSortingTask.Execute();
+
+            if(alphabeticalDescending) {
+                Array.Reverse(EmployeeRef.Instance.employeeUser);
+            }
+
+            alphabeticalDescending = !alphabeticalDescending;
 
             PopulateEmployees(EmployeeRef.Instance.employeeUser);
         }
-        public void CloseScreen() {
-            employeeScreen.SetActive(false);
+
+        public void SortByEntranceTime() {
+            if(entranceTimeSortingTask == null) {
+                Debug.LogError("Entrance Time Sorting Task is not assigned!");
+                return;
+            }
+
+            if(EmployeeRef.Instance == null ||
+                EmployeeRef.Instance.employeeUser == null) {
+                Debug.LogError("Employee data is not loaded!");
+                return;
+            }
+
+            entranceTimeSortingTask.Execute();
+
+            if(entranceTimeDescending) {
+                Array.Reverse(EmployeeRef.Instance.employeeUser);
+            }
+
+            entranceTimeDescending = !entranceTimeDescending;
+
+            PopulateEmployees(EmployeeRef.Instance.employeeUser);
+        }
+
+        public void ResetVersion() {
+            if(originalEmployeeJson == null) {
+                Debug.LogError("Original employee JSON is not assigned!");
+                return;
+            }
+
+            EmployeeArray data =
+                JsonUtility.FromJson<EmployeeArray>(originalEmployeeJson.text);
+
+            if(data == null || data.employees == null) {
+                Debug.LogError("Could not reload original employee data!");
+                return;
+            }
+
+            if(EmployeeRef.Instance == null) {
+                Debug.LogError("EmployeeRef.Instance is null!");
+                return;
+            }
+
+            EmployeeRef.Instance.employeeUser = data.employees;
+
+            alphabeticalDescending = false;
+            entranceTimeDescending = false;
+
+            PopulateEmployees(EmployeeRef.Instance.employeeUser);
+
+            Debug.Log("Employee list reset to its original version.");
         }
     }
 }

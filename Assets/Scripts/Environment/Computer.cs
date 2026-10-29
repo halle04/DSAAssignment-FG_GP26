@@ -12,7 +12,8 @@ namespace Environment {
         [SerializeField] private EmployeeUI employeeUI;
 
         public void OnInteract() {
-            testTask.Dequeue().Execute();
+            if(testTask.Queue.Count > 0)
+                testTask.Dequeue().Execute();
 
             if(employeeUI != null) {
                 employeeUI.OpenScreen();
