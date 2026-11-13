@@ -7720,7 +7720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: testTask.Queue.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: 'testTask.Queue.Array.data[0]'
@@ -7729,11 +7729,11 @@ PrefabInstance:
     - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: 'testTask.Queue.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: f114ea2f1ade64c4593caf9f638c8cd9, type: 2}
+      objectReference: {fileID: 11400000, guid: ae9e5ba982fba2d4d9effd6730f4352d, type: 2}
     - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: 'testTask.Queue.Array.data[2]'
       value: 
-      objectReference: {fileID: 11400000, guid: 4960aba1670401241b739cf6de911af6, type: 2}
+      objectReference: {fileID: 11400000, guid: f114ea2f1ade64c4593caf9f638c8cd9, type: 2}
     - target: {fileID: 5694532769315531512, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
