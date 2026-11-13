@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using static Environment.Tasks.Employee;
 
 namespace Environment.Tasks {
     public class EmployeeUI : MonoBehaviour {

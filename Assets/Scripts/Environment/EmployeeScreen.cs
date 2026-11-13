@@ -7,17 +7,17 @@ namespace Environment.Tasks {
 
         public void SetEmployee(Employee employee) {
             string information =
-                "Name: " + employee.name + "\n" +
-                "ID: " + employee.employeeId + "\n" +
+                "Name: " + employee.Name + "\n" +
+                "ID: " + employee.EmployeeId + "\n" +
                 "Engine Room Clearance: " +
-                (employee.hasEngineRoomClearance ? "Yes" : "No");
+                (employee.HasEngineRoomClearance ? "Yes" : "No");
 
-            if(employee.hasEngineRoomClearance) {
+            if(employee.HasEngineRoomClearance) {
                 information +=
                     "\nLast Entrance: " +
-                    employee.lastEntranceInEngineRoom +
+                    employee.LastEntranceInEngineRoom +
                     "\nLast Exit: " +
-                    employee.lastExitFromEngineRoom;
+                    employee.LastExitFromEngineRoom;
             }
 
             employeeText.text = information;

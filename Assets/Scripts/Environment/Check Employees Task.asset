@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be63a200a0204c4a8efabc61edc40b0, type: 3}
   m_Name: Check Employees Task
   m_EditorClassIdentifier: Assembly-CSharp::Environment.Tasks.newEmployee
-  jsonFile: {fileID: 4900000, guid: 0b0f32cb478e1474ba9b2ce9c454e620, type: 3}
+  jsonFile: {fileID: 4900000, guid: 545779546f651cd46862f720dece4763, type: 3}
+  employeeUI: {fileID: 0}

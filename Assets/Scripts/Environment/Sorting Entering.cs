@@ -7,12 +7,10 @@ namespace Environment.Tasks {
     public class EntranceTimeSortingTask : Task {
         public override void Execute() {
             if(EmployeeRef.Instance == null) {
-                Debug.LogError("EmployeeRef.Instance is null!");
                 return;
             }
 
             if(EmployeeRef.Instance.employeeUser == null) {
-                Debug.LogError("No employee data available to sort!");
                 return;
             }
 
@@ -22,7 +20,7 @@ namespace Environment.Tasks {
                         DateTime entranceTime;
 
                         bool validDate = DateTime.TryParse(
-                            employee.lastEntranceInEngineRoom,
+                            employee.LastEntranceInEngineRoom,
                             out entranceTime
                         );
 

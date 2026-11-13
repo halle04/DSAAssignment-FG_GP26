@@ -224,16 +224,16 @@ RectTransform:
   m_GameObject: {fileID: 40770206}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 985655503}
   m_Father: {fileID: 769101949}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 410, y: -406.1}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -456.7, y: 74.899994}
+  m_SizeDelta: {x: 213.8, y: 48.899994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &40770208
 MonoBehaviour:
@@ -362,17 +362,17 @@ RectTransform:
   m_GameObject: {fileID: 73331017}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.15, y: 1.15, z: 1.15}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 605631086}
   m_Father: {fileID: 769101949}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 410, y: 327}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -617.2, y: -141.4}
   m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &73331019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3804,8 +3804,8 @@ RectTransform:
   m_GameObject: {fileID: 985655502}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.44, y: 1.44, z: 1.44}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 40770207}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3834,7 +3834,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: RESET
+  m_text: Start / Reset
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5455,7 +5455,7 @@ MonoBehaviour:
   employeeScreen: {fileID: 769101948}
   alphabeticalSortingTask: {fileID: 11400000, guid: 9f57639b4b54b73459385ec153395b30, type: 2}
   entranceTimeSortingTask: {fileID: 11400000, guid: 70b34383203baf242b8eb5e2192691ee, type: 2}
-  originalEmployeeJson: {fileID: 4900000, guid: 0b0f32cb478e1474ba9b2ce9c454e620, type: 3}
+  originalEmployeeJson: {fileID: 4900000, guid: 545779546f651cd46862f720dece4763, type: 3}
 --- !u!4 &1338637211
 Transform:
   m_ObjectHideFlags: 0
@@ -5561,16 +5561,16 @@ RectTransform:
   m_GameObject: {fileID: 1407329566}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.15, y: 1.15, z: 1.15}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1261174809}
   m_Father: {fileID: 769101949}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 410, y: 263}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -457.2, y: -210.29999}
+  m_SizeDelta: {x: 159, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1407329568
 MonoBehaviour:
@@ -7203,11 +7203,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EmployeeRef
   employeeUser:
-  - name: 
-    employeeId: 0
-    hasEngineRoomClearance: 0
-    lastEntranceInEngineRoom: 
-    lastExitFromEngineRoom: 
+  - Name: 
+    EmployeeId: 0
+    HasEngineRoomClearance: 0
+    LastEntranceInEngineRoom: 
+    LastExitFromEngineRoom: 
 --- !u!1001 &1938831992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7720,12 +7720,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: testTask.Queue.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: 'testTask.Queue.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 3ebf2caa8e5282e4fac0e82886617540, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: 'testTask.Queue.Array.data[1]'
       value: 
