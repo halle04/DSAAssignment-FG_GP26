@@ -11,7 +11,6 @@ namespace Environment.Tasks {
         [Header("Sorting Tasks")]
         [SerializeField] private AlphabeticalSortingTask alphabeticalSortingTask;
         [SerializeField] private EntranceTimeSortingTask entranceTimeSortingTask;
-        [SerializeField] private BFSSearch BFS;
 
         [Header("Reset")]
         [SerializeField] private TextAsset originalEmployeeJson;

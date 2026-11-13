@@ -12,11 +12,14 @@ namespace Environment {
         [SerializeField] private EmployeeUI employeeUI;
 
         public void OnInteract() {
-            if(testTask.Queue.Count > 0)
-                testTask.Peek().Execute();
+            if(testTask.Queue.Count > 0 && employeeUI != null) {
+                //employeeUI.OpenScreen();
+                testTask.Dequeue().Execute();
 
-            if(employeeUI != null) {
-                employeeUI.OpenScreen();
+
+                //if(employeeUI != null) {
+                //    employeeUI.OpenScreen();
+                //}
             }
         }
     }

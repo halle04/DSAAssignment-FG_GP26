@@ -56,8 +56,11 @@ public class  BinarySearchTree {
         Queue<BSTNode<Employee>> queue = new Queue<BSTNode<Employee>>();
         queue.Enqueue(root);
 
-        while(queue != null || queue.Count > 0) {
+        while(queue != null && queue.Count > 0) {
             BSTNode<Employee> node = queue.Dequeue();
+            if(node == null ) {
+                return;
+            }
             Debug.Log(node.GetData().LastEntranceInEngineRoom);
 
             if(node.left != null) {
