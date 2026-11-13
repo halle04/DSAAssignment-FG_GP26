@@ -11,6 +11,7 @@ namespace Environment.Tasks {
         [Header("Sorting Tasks")]
         [SerializeField] private AlphabeticalSortingTask alphabeticalSortingTask;
         [SerializeField] private EntranceTimeSortingTask entranceTimeSortingTask;
+        [SerializeField] private BFSSearch BFS;
 
         [Header("Reset")]
         [SerializeField] private TextAsset originalEmployeeJson;
@@ -37,11 +38,6 @@ namespace Environment.Tasks {
 
                 if(employeeEntry != null) {
                     employeeEntry.SetEmployee(employee);
-                }
-                else {
-                    Debug.LogError(
-                        "Employee prefab is missing EmployeeScreen!"
-                    );
                 }
             }
         }
@@ -84,13 +80,6 @@ namespace Environment.Tasks {
 
         public void SortByEntranceTime() {
             if(entranceTimeSortingTask == null) {
-                Debug.LogError("Entrance Time Sorting Task is not assigned!");
-                return;
-            }
-
-            if(EmployeeRef.Instance == null ||
-                EmployeeRef.Instance.employeeUser == null) {
-                Debug.LogError("Employee data is not loaded!");
                 return;
             }
 
@@ -106,23 +95,9 @@ namespace Environment.Tasks {
         }
 
         public void ResetVersion() {
-            if(originalEmployeeJson == null) {
-                Debug.LogError("Original employee JSON is not assigned!");
-                return;
-            }
-
+            
             EmployeeArray data =
                 JsonUtility.FromJson<EmployeeArray>(originalEmployeeJson.text);
-
-            if(data == null || data.employees == null) {
-                Debug.LogError("Could not reload original employee data!");
-                return;
-            }
-
-            if(EmployeeRef.Instance == null) {
-                Debug.LogError("EmployeeRef.Instance is null!");
-                return;
-            }
 
             EmployeeRef.Instance.employeeUser = data.employees;
 

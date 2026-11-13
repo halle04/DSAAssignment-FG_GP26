@@ -13,7 +13,7 @@ namespace Environment {
 
         public void OnInteract() {
             if(testTask.Queue.Count > 0)
-                testTask.Dequeue().Execute();
+                testTask.Peek().Execute();
 
             if(employeeUI != null) {
                 employeeUI.OpenScreen();
